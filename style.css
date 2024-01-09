@@ -66,6 +66,48 @@ span{
 .number>span{
     filter: drop-shadow(1px 1px 1px white);
 }
+.balloon {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.balloon1,
+.balloon2,
+.balloon3 {
+    width: 5rem;  
+    height: 5rem; 
+    position: absolute;
+    z-index: 1;
+}
+
+.balloon1 {
+    top: 1rem;
+    left: 1rem;
+    animation: ball1 2s ease-in-out 1s forwards;
+}
+.balloon1 img{
+    width: 5rem;
+    animation: updown 4s ease-in-out infinite;
+}
+.balloon2 {
+    top: 1rem;
+    right: 1rem;  
+    animation: ball2 2s ease-in-out 1s forwards;
+}
+.balloon2 img{
+    width: 5rem;
+    animation: updown 4s ease-in-out infinite;
+}
+.balloon3 {
+    bottom: 8rem;
+    left: 1rem;
+    animation: ball3 2s ease-in-out 1s forwards;
+}
+.balloon3 img{
+    width: 5rem;
+    animation: updown 4s ease-in-out infinite;
+}
 .number span img {
     width: 10rem;
 }
@@ -85,12 +127,12 @@ span{
     margin-left: -60px;
 }
 .bg_image{
-    position: relative;
+    position: absolute;
     top: 0%;
     width: 100%;
     height: 100vh;
     background: transparent;
-    z-index: 1;
+    z-index: 5;
 }
 .bg_image .image1 img{
     position: absolute;
@@ -303,6 +345,48 @@ span{
         opacity: 1;
       } 
 }
+@keyframes ball1 {
+    0% {
+        left: -300px;
+        opacity: 0;
+      }
+      100% {
+        left: 1rem;
+        opacity: 1;
+      } 
+}
+@keyframes ball2 {
+    0% {
+        right: -300px;
+        opacity: 0;
+      }
+      100% {
+        right: 1rem;
+        opacity: 1;
+      } 
+}
+@keyframes ball3 {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+      }
+      100% {
+        bottom: 8rem;
+        opacity: 1;
+      } 
+}
+@keyframes updown {
+    0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(.6rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    
+}
 @keyframes animation {
     0% {
         margin-top: 0px;
@@ -375,6 +459,7 @@ span{
         top: 61%;
         right: 10%;
     }
+    
     .number span img {
         width: 10rem;
     }
