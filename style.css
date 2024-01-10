@@ -199,14 +199,14 @@ span{
 .wish-box{
     width: 90%;
     border-radius: 10px;
-    border: 2px solid #fff;
+    border: 2px solid #ff5000;
     min-height: 30vh;
     margin: 10px 5%;
 }
 .wish-box p{
     padding: 20px 15px;
     font-size: 25px;
-    color: white;
+    color: rgb(209, 209, 209);
     font-family: 'Pacifico', cursive;
 }
 .contact{
@@ -261,44 +261,37 @@ span{
  
  .contact form textarea{
     box-sizing: border-box;
-      resize: none;
-      outline: 1px solid white;
+    resize: none;
+    outline: 1px solid rgb(209, 209, 209);
  }
- .btn {
+.btn {
     display: inline-block;
     padding: .3rem 2rem;
     border-radius: 4rem;
     background: transparent;
     font-size: 1.4rem;
     border: .2rem solid;
-    color: white;
+    color: rgb(209, 209, 209);
     letter-spacing: .1rem;
     position: relative;
     margin: 0 1.5rem 1.5rem 0;
     font-weight: 600;
     z-index: 10;
     font-family: 'Pacifico', cursive;
-  }
+}
  
- .contact form .btn{
+.contact form .btn{
     margin-top: .7rem;
     cursor: pointer;
- }
- .contact form .btn:hover{
+}
+.contact form .btn:hover{
     transition: 500ms ease-in-out;
     background-color: #ff5000;
     color: black;
- }
-
- .contact-me h2{
-    font-size: 3.2rem;
-    margin: 3rem 0;
-    font-weight: 600;
-    color: white;
-    text-align: center;
 }
+
 .copyright{
-    color: white;
+    color: rgb(209, 209, 209);
     font-size: 1.2rem;
     margin: 1rem 0;
 }
@@ -311,7 +304,7 @@ span{
     width: 3.8rem;
     height: 3.8rem;
     border-radius: 50%;
-    background: white;
+    background: rgb(209, 209, 209);
 }
 
 @keyframes glow {
