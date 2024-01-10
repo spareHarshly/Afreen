@@ -10,6 +10,12 @@
   <link rel="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+
+  <!-------------Preloader--------------->
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
+
   <div class="scrolldown">
     <div class="icon"><i class="fa-solid fa-arrow-down"></i></div></i><p>Scroll<br>Down</p>
   </div>
@@ -97,6 +103,52 @@
             pElement.style.display = 'none';
         }
     });
+
+
+    /***********************pre loader***********************/
+    const ImgPaths = [
+    'images/n.png',
+    'images/e2.png',
+    'images/e1.png',
+    'images/r.png',
+    'images/f.png',
+    'images/a.png',
+    'images/happy2.png',
+    'images/Pookie2.jpg',
+    'images/Pookie1.png',
+    'images/balloon3-removebg-preview.png',
+    'images/balloon1-removebg-preview.png',
+    'images/balloon4.png'
+    ];
+
+
+    function preloadImg(ImgPaths, callback) {
+      let loadImg = 0;
+
+      for (const ImgPath of ImgPaths) {
+          const img = new Image();
+          img.src = ImgPath;
+
+          console.log("load3");
+          img.onload = function() {
+            loadImg++;
+            if (loadImg === ImgPaths.length) {
+                callback();
+            }
+          };
+      }
+    }
+
+    function handleImgLoad() {
+      console.log("load2");
+      document.body.classList.add("loaded");
+    }
+
+
+    window.onload = function() {
+        console.log("load");
+        preloadImg(ImgPaths, handleImgLoad);
+    };
   </script>
 
 </body>
