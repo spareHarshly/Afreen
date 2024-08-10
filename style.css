@@ -212,12 +212,6 @@ span{
     align-items: center;
     z-index: 99;
 }
-.scrolldown p{
-    font-size: 15px;
-    font-weight: bold;
-    font-family: 'Pacifico', cursive;
-    filter: drop-shadow(1px 1px 1px #444444);
-}
 .scrolldown .icon{
     width: 40px;
     height: 40px;
