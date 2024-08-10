@@ -77,8 +77,6 @@ span{
     height: auto;
     object-fit: cover;
     object-position: left;
-    opacity: 0;
-    animation: decoration 2s ease-in-out 1s forwards;
 }
 .word{
     width: 100%;
@@ -88,8 +86,6 @@ span{
     display: flex;
     justify-content: center;
     align-items: start;
-    opacity: 0;
-    animation: animation 2s ease-in-out 1s forwards;
     z-index: 99;
 }
 .word img{
@@ -107,8 +103,6 @@ span{
     align-items: center;
     text-align: center;
     padding: 200px 0px 0px 0px;
-    opacity: 0;
-    animation: animation1 2s ease-in-out 1s forwards;
     z-index: 99;
 }
 .number>span{
@@ -134,8 +128,6 @@ span{
 .balloon1 {
     top: 1rem;
     left: 1rem;
-    opacity: 0;
-    animation: ball1 5s ease-in-out 1s forwards;
 }
 .balloon1 img{
     width: 5rem;
@@ -143,9 +135,7 @@ span{
 }
 .balloon2 {
     top: 1rem;
-    right: 1rem;  
-    opacity: 0;
-    animation: ball1 5s ease-in-out 1s forwards;
+    right: 1rem; 
 }
 .balloon2 img{
     width: 5rem;
@@ -154,8 +144,6 @@ span{
 .balloon3 {
     bottom: 8rem;
     left: 1rem;
-    opacity: 0;
-    animation: ball3 5s ease-in-out 1s forwards;
 }
 .balloon3 img{
     width: 5rem;
@@ -164,8 +152,6 @@ span{
 .balloon4 {
     bottom: 8rem;
     right: 1rem;
-    opacity: 0;
-    animation: ball3 5s ease-in-out 1s forwards;
 }
 .balloon4 img{
     width: 5rem;
@@ -205,8 +191,6 @@ span{
     width: 28rem;
     overflow: hidden;
     transform: rotate(-15deg);
-    opacity: 0;
-    animation: leftimg 2s ease-in-out 1s forwards;
 }
 .bg_image .image2 img{
     position: absolute;
@@ -216,8 +200,6 @@ span{
     width: 28rem;
     overflow: hidden;
     transform: rotate(15deg);
-    opacity: 0;
-    animation: rightimg 2s ease-in-out 1s forwards;
 }
 .scrolldown{
     position: fixed;
@@ -228,8 +210,6 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    animation: animation 30s ease-in-out 1s forwards;
 }
 .scrolldown p{
     font-size: 15px;
@@ -369,6 +349,48 @@ span{
     height: 3.8rem;
     border-radius: 50%;
     background: rgb(209, 209, 209);
+}
+/****************************************/
+body.loaded .topImg img,
+body.loaded .word,
+body.loaded .number,
+body.loaded .balloon1,
+body.loaded .balloon2,
+body.loaded .balloon3,
+body.loaded .balloon4,
+body.loaded .scrolldown,
+body.loaded .bg_image .image1 img,
+body.loaded .bg_image .image2 img {
+    opacity: 0;
+    animation: none; /* Disable animations by default */
+}
+
+body.loaded .topImg img {
+    animation: decoration 2s ease-in-out 1s forwards;
+}
+body.loaded .word {
+    animation: animation 2s ease-in-out 1s forwards;
+}
+body.loaded .number {
+    animation: animation1 2s ease-in-out 1s forwards;
+}
+body.loaded .balloon1,
+body.loaded .balloon2{
+    animation: ball1 5s ease-in-out 1s forwards;
+}
+
+body.loaded .balloon3,
+body.loaded .balloon4 {
+    animation: ball3 5s ease-in-out 1s forwards;
+}
+body.loaded .scrolldown {
+    animation: animation 30s ease-in-out 1s forwards;
+}
+body.loaded .bg_image .image1 img {
+    animation: leftimg 2s ease-in-out 1s forwards;
+}
+body.loaded .bg_image .image2 img {
+    animation: rightimg 2s ease-in-out 1s forwards;
 }
 
 @keyframes glow {
