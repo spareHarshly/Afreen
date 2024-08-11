@@ -65,7 +65,7 @@ span{
     color: #ff5000;
 }
 .topImg{
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
