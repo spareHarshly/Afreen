@@ -70,7 +70,7 @@ span{
     left: 0;
     width: 100%;
     overflow: hidden;
-    z-index: 99;
+    z-index: -1;
 }
 .topImg img{
     width: 100%;
